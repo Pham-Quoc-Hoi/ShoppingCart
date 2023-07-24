@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm bg-light justify-content-between">
+            <form class="form-inline" action="/action_page.php">
+                <select class="form-control mr-sm-2" name="" id="filterProduct">
+                    <option value="0">Chọn dòng điện thoại</option>
+                    <option value="Tất cả">Tất cả</option>
+                    <option value="Samsung">Samsung</option>
+                    <option value="Iphone">Iphone</option>
+                </select>
+                
+            </form>
+            
+
+            <div>
+                <button type="button " class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="cartIcon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+                <a href="./admin/admin.html"><button class="btn btn-primary"><i class="fa-solid fa-gear"></i></button></a>
+            </div>
+            
+        </nav>
+    </header>
+    <section id="phone_list">
+
+        <div class="container">
+            <div class="header_phone" >
+                <h3>Điện thoại di động</h3>
+            </div>
+            <div id="productsList" class="row justify-content-center ">
+
+
+            
+            </div>
+        </div>
+    </section>
+
+
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Cart</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body p-0">
+                    <table id="cartTable" class="table m-0">
+                           
+                    </table>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer flex-column">
+                    <div class="d-flex">
+                        <p>Total: <span id="totalCart">0</span> $</p>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn btn-danger mr-3" onclick="purchaseCart()" >Purchase</button>
+                        <button type="button" class="btn btn-danger mr-3"  onclick="clearCart()">Clear Cart</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"
+        integrity="sha512-zJYu9ICC+mWF3+dJ4QC34N9RA0OVS1XtPbnf6oXlvGrLGNB8egsEzu/5wgG90I61hOOKvcywoLzwNmPqGAdATA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/module/Cart.js"></script>
+    <script src="./assets/module/Product.js"></script>
+    <script src="./assets/services/productsServices.js"></script>
+    <script type="module" src="./assets/controller/main.js"></script>
+</body>
+
+</html>
